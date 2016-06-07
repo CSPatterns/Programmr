@@ -1,0 +1,59 @@
+import java.io.*;  
+  
+public class PalindromString  
+{  
+	public static void main(String a[]) throws Exception  
+	{  
+           String strn;  
+           int flag=0;  
+           System.out.println("Enter the string:");  
+           BufferedReader br = new BufferedReader(new InputStreamReader(System.in));  
+           strn=br.readLine();  
+           System.out.println("Result string is:");  
+           //write your logic here  
+			if(isP(strn)){
+				flag=1;
+			}
+			
+
+  
+  
+  
+           //end  
+           if(flag==1)  
+               System.out.print("palindrome");  
+           else   
+               System.out.print("not a palindrome");  
+  
+        }
+
+  
+ 	public static boolean isP(String str){
+		int mid = str.length()/2;
+		String first = str.substring(0, mid);
+		String last = str.substring(mid, str.length());
+		StringBuilder reverseFirst = new StringBuilder();
+		StringBuilder reverseLast= new StringBuilder();
+		String newStr = "";
+		
+		
+		for(int i=first.length()-1 ; i>=0; i--){
+			reverseFirst.append(first.charAt(i));
+		}
+		
+		
+		for(int i=last.length()-1 ; i>=0; i--){
+			reverseLast.append(last.charAt(i));
+		}
+		
+		newStr = reverseLast.toString() + reverseFirst.toString();
+		
+		if(str.equals(newStr)){
+			return true;
+		}
+		
+		return false;
+		
+	}
+  		
+}  
