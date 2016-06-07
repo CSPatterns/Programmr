@@ -37,7 +37,7 @@ public static void main(String a[]) throws Exception
 						return newWord;
 				}else{
 					System.out.println("insideelse");
-						newWord =  newWord + tens[0] + ones[str.charAt(1)-1];
+						newWord =  newWord + tens[0] + ones[Character.getNumericValue(str.charAt(1))-1];
 						return newWord;
 				}
 			}
