@@ -13,9 +13,8 @@ public static void main(String a[]) throws Exception
       
          System.out.println("Enter the number:");
           num=sc.nextInt();
-         System.out.println("Entered number is:");
+        // System.out.println("Entered number is:");
      
-	 
 		System.out.println(words(num));
 	  
         }//main 
@@ -29,19 +28,22 @@ public static void main(String a[]) throws Exception
 	
 	if(num >= 20){
 	 String str=Integer.toString(num);
-	
-			if(str.charAt(0) == 2){
-				if(str.charAt(1)==0){
+	 System.out.println((int)str.charAt(1));
+
+			if(str.charAt(0) == '2'){
+				
+				if(str.charAt(1)=='0'){
 						newWord =  newWord + tens[0];
 						return newWord;
 				}else{
-						newWord =  newWord + tens[0] + ones[(str.charAt(1))-1];
+					System.out.println("insideelse");
+						newWord =  newWord + tens[0] + ones[str.charAt(1)-1];
 						return newWord;
 				}
 			}
 			
-			if(str.charAt(0) == 3){
-				if(str.charAt(1)==0){
+			if(str.charAt(0) == '3'){
+				if(str.charAt(1)=='0'){
 						newWord = tens[1];
 						return newWord;
 				}else{
@@ -49,8 +51,8 @@ public static void main(String a[]) throws Exception
 					return newWord;
 				}
 			}
-			if(str.charAt(0) == 4){
-				if(str.charAt(1)==0){
+			if(str.charAt(0) == '4'){
+				if(str.charAt(1)=='0'){
 						newWord = tens[2];
 						return newWord;
 				}else{
@@ -58,8 +60,8 @@ public static void main(String a[]) throws Exception
 					return newWord;
 				}
 			}
-			if(str.charAt(0) == 5){
-				if(str.charAt(1)==0){
+			if(str.charAt(0) == '5'){
+				if(str.charAt(1)=='0'){
 						newWord = tens[3];
 						return newWord;
 				}else{
@@ -68,8 +70,8 @@ public static void main(String a[]) throws Exception
 				}
 			}
 			
-			if(str.charAt(0) == 6){
-				if(str.charAt(1)==0){
+			if(str.charAt(0) == '6'){
+				if(str.charAt(1)=='0'){
 						newWord = tens[4];
 						return newWord;
 				}else{
@@ -77,8 +79,8 @@ public static void main(String a[]) throws Exception
 					return newWord;				
 				}
 			}
-			if(str.charAt(0) == 7){
-				if(str.charAt(1)==0){
+			if(str.charAt(0) == '7'){
+				if(str.charAt(1)=='0'){
 						newWord = tens[5];
 						return newWord;
 				}else{
@@ -88,8 +90,8 @@ public static void main(String a[]) throws Exception
 				}
 
 			}
-			if(str.charAt(0) == 8){
-				if(str.charAt(1)==0){
+			if(str.charAt(0) == '8'){
+				if(str.charAt(1)=='0'){
 						newWord = tens[6];
 						return newWord;
 				}else{
@@ -97,8 +99,8 @@ public static void main(String a[]) throws Exception
 					return newWord;				
 				}
 			}
-			if(str.charAt(0) == 9){
-				if(str.charAt(1)==0){
+			if(str.charAt(0) == '9'){
+				if(str.charAt(1)=='0'){
 						newWord = tens[7];
 						return newWord;
 				}else{
