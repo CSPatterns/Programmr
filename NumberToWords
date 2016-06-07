@@ -28,7 +28,6 @@ public static void main(String a[]) throws Exception
 	
 	if(num >= 20){
 	 String str=Integer.toString(num);
-	 System.out.println((int)str.charAt(1));
 
 			if(str.charAt(0) == '2'){
 				
@@ -36,7 +35,6 @@ public static void main(String a[]) throws Exception
 						newWord =  newWord + tens[0];
 						return newWord;
 				}else{
-					System.out.println("insideelse");
 						newWord =  newWord + tens[0] + ones[Character.getNumericValue(str.charAt(1))-1];
 						return newWord;
 				}
@@ -47,7 +45,7 @@ public static void main(String a[]) throws Exception
 						newWord = tens[1];
 						return newWord;
 				}else{
-					newWord = tens[1] + ones[str.charAt(1)-1];
+					newWord = tens[1] + ones[Character.getNumericValue(str.charAt(1))-1];
 					return newWord;
 				}
 			}
@@ -65,7 +63,7 @@ public static void main(String a[]) throws Exception
 						newWord = tens[3];
 						return newWord;
 				}else{
-					newWord = tens[3] + ones[str.charAt(1)-1];
+					newWord = tens[3] + ones[Character.getNumericValue(str.charAt(1))-1];
 					return newWord;
 				}
 			}
@@ -75,7 +73,7 @@ public static void main(String a[]) throws Exception
 						newWord = tens[4];
 						return newWord;
 				}else{
-					newWord = tens[4] + ones[str.charAt(1)-1];
+					newWord = tens[4] + ones[Character.getNumericValue(str.charAt(1))-1];
 					return newWord;				
 				}
 			}
@@ -84,7 +82,7 @@ public static void main(String a[]) throws Exception
 						newWord = tens[5];
 						return newWord;
 				}else{
-					newWord = tens[5] + ones[str.charAt(1)-1];
+					newWord = tens[5] + ones[Character.getNumericValue(str.charAt(1))-1];
 					return newWord;
 				
 				}
@@ -95,7 +93,7 @@ public static void main(String a[]) throws Exception
 						newWord = tens[6];
 						return newWord;
 				}else{
-					newWord = tens[6] + ones[str.charAt(1)-1];
+					newWord = tens[6] + ones[Character.getNumericValue(str.charAt(1))-1];
 					return newWord;				
 				}
 			}
@@ -104,7 +102,7 @@ public static void main(String a[]) throws Exception
 						newWord = tens[7];
 						return newWord;
 				}else{
-					newWord = tens[7] + ones[str.charAt(1)-1];
+					newWord = tens[7] + ones[Character.getNumericValue(str.charAt(1))-1];
 					return newWord;				
 				}
 			}
