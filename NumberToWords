@@ -1,0 +1,137 @@
+import java.io.*;
+import java.util.Scanner;
+public class numtostring
+{
+	
+	public static String ones[]={"one","two","three","four","five","six"," seven", "eight","nine","ten","eleven","twelve","thirteen","forteen","fifteen","sixteen","seventeen","eighteen","ninteen"};      
+        public static String tens[]={"twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninty"};       
+public static void main(String a[]) throws Exception
+	{
+        Scanner sc=new Scanner(System.in);
+        int num,rem,t;   
+ 
+      
+         System.out.println("Enter the number:");
+          num=sc.nextInt();
+         System.out.println("Entered number is:");
+     
+	 
+		System.out.println(words(num));
+	  
+        }//main 
+
+	public static String words(int num){
+	String newWord = "";
+	if(num > 0 && num <20){
+		newWord = newWord + ones[num -1];
+		return newWord;
+	}
+	
+	if(num >= 20){
+	 String str=Integer.toString(num);
+	
+			if(str.charAt(0) == 2){
+				if(str.charAt(1)==0){
+						newWord =  newWord + tens[0];
+						return newWord;
+				}else{
+						newWord =  newWord + tens[0] + ones[(str.charAt(1))-1];
+						return newWord;
+				}
+			}
+			
+			if(str.charAt(0) == 3){
+				if(str.charAt(1)==0){
+						newWord = tens[1];
+						return newWord;
+				}else{
+					newWord = tens[1] + ones[str.charAt(1)-1];
+					return newWord;
+				}
+			}
+			if(str.charAt(0) == 4){
+				if(str.charAt(1)==0){
+						newWord = tens[2];
+						return newWord;
+				}else{
+					newWord = tens[2] + ones[(str.charAt(1))-1];
+					return newWord;
+				}
+			}
+			if(str.charAt(0) == 5){
+				if(str.charAt(1)==0){
+						newWord = tens[3];
+						return newWord;
+				}else{
+					newWord = tens[3] + ones[str.charAt(1)-1];
+					return newWord;
+				}
+			}
+			
+			if(str.charAt(0) == 6){
+				if(str.charAt(1)==0){
+						newWord = tens[4];
+						return newWord;
+				}else{
+					newWord = tens[4] + ones[str.charAt(1)-1];
+					return newWord;				
+				}
+			}
+			if(str.charAt(0) == 7){
+				if(str.charAt(1)==0){
+						newWord = tens[5];
+						return newWord;
+				}else{
+					newWord = tens[5] + ones[str.charAt(1)-1];
+					return newWord;
+				
+				}
+
+			}
+			if(str.charAt(0) == 8){
+				if(str.charAt(1)==0){
+						newWord = tens[6];
+						return newWord;
+				}else{
+					newWord = tens[6] + ones[str.charAt(1)-1];
+					return newWord;				
+				}
+			}
+			if(str.charAt(0) == 9){
+				if(str.charAt(1)==0){
+						newWord = tens[7];
+						return newWord;
+				}else{
+					newWord = tens[7] + ones[str.charAt(1)-1];
+					return newWord;				
+				}
+			}
+		
+	
+	}
+
+		return newWord;
+	 }
+	 
+}  
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
